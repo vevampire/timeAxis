@@ -1,0 +1,43 @@
+//获取数据
+
+//处理数据
+var yearData=[];//时间选择器
+var timeContent=[];//时间轴内容
+var currentYear=new Date().getFullYear();//当前日期
+var chooseYear=new Date().getFullYear();//默认选择当前日期
+var choosePage;//选中日期对应的page页，number
+
+//数据获取失败
+if(!(data.length>0)){
+    $("timeShow").hide();
+}
+
+//数据获取成功
+for (var yearvalue of data) {
+    yearData.push(yearvalue.year)
+    for (var dayvalue of yearvalue.dayContent) {
+        dayvalue.year=yearvalue.year
+        timeContent.push(dayvalue)
+    }
+}
+//动态添加时间选择器选项
+if(yearData.length>0){
+    $("#timeYChoose").children().remove();
+    var option_items;
+    $(yearData).each(function(index) {
+        var option_item="<option value='"+yearData[index]+"'>"+yearData[index]+"</option>";
+        option_items=option_items+option_item
+    });
+    $("#timeYChoose").append(option_items);
+}
+$(document).ready(function(){
+    $("select").change(function() {
+        $(".hd li:nth-child(3)").click()
+    })
+});
+
+$(function () {
+    //创建案件历史
+    $(".fishBone").fishBone(timeContent);
+});
+

@@ -1,0 +1,296 @@
+.timeShow *{
+    user-select: none
+}
+.timeShow{
+    width: 90%;
+    margin: 30px auto;
+}
+.time_choose{
+    line-height: 20px;
+    position: relative;
+}
+#timeYChoose{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid #D6D6D6;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    padding-left: 5px;
+    background-color: transparent;
+}
+.angle{
+    color: #D6D6D6;
+    transform: rotate(90deg);
+    font-weight: bolder;
+    position: absolute;
+    left: 95px;
+    top: 2px;
+    z-index: -1;
+}
+.container{
+    margin-top: 20px;
+}
+.timeAxis *{
+	margin: 0;
+    padding: 0;
+}
+.timeAxis .hd{
+	visibility: hidden;
+	height: 0;
+}
+.timeAxis ul{
+    position: relative;
+	overflow: visible!important;	
+}
+.timeAxis ul,li{
+	list-style: none;
+}
+.timeAxis{
+    color: #767676;
+	width: 100%;
+	height: 100%;
+	white-space:nowrap;
+	position: relative;
+	font-size: 12px;
+}
+.timeAxis .wrapper{
+  padding: 0 10px;
+  margin: auto;
+  overflow: hidden;
+}
+.timeAxis .wrapper .bd {
+	overflow: hidden;
+}
+.timeAxis .item{
+    position: relative;
+    width: 150px;
+    height: 270px;
+    display: inline-block;
+}
+.content .boxC {
+    width: 120px;
+    height: 90px;
+    border: 1px solid #D6D6D6;
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .content .topC {
+    box-shadow: -2px -2px 4px 2px #eae7e7;
+ }
+ .content .bottomC {
+    box-shadow: 2px 2px 4px 2px #eae7e7;
+ }
+ .content .topC:hover{
+    border: 1px solid #74ABFD;
+    box-shadow: -2px -2px 4px 2px #74ABFD;
+ }
+ .content .bottomC:hover{
+    border: 1px solid #74ABFD;
+    box-shadow: 2px 2px 4px 2px #74ABFD;
+ }
+ .content .boxC_choose{
+    border: 1px solid #74ABFD;
+ }
+ .content .boxC_bg.topC{
+     box-shadow: -2px -2px 4px 2px  #74ABFD;
+     background: #74ABFD;
+     color: #fff;
+ }
+ .content .boxC_bg.bottomC{
+    box-shadow: 2px 2px 4px 2px  #74ABFD;
+    background: #74ABFD;
+    color: #fff;
+}
+ .content .boxC::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    border-color: #D6D6D6 transparent transparent transparent;
+}
+.content .boxC:hover::before{
+    border-color: #74ABFD transparent transparent transparent;
+}
+.content .boxC_choose::before{
+    border-color: #74ABFD transparent transparent transparent;
+ }
+ .content .boxC::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    position: absolute;
+    bottom: -19px;
+    left: 50px;
+    border-color: #fff transparent transparent transparent;
+}
+.content .boxC_bg::after{
+    border-color: #74ABFD transparent transparent transparent;
+}
+.content .bottomC::before{
+    top: -20px;
+    transform: rotate(180deg);
+}
+.content .bottomC::after{
+    top: -19px;
+    transform: rotate(180deg);
+}
+.content .topC{
+    position: absolute;
+    bottom: 170px;
+}
+.content .bottomC{
+    position: absolute;
+    top: 170px;
+}
+.content .daytime{
+    position: absolute;
+    top: 140px;
+    text-align: center;
+    width: 120px;
+}
+.content .circleC{
+    position: absolute;
+    top: 120px;
+    left: 74px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #D6D6D6;
+    border-radius:50%;
+    background-color: #fff;
+
+}
+.content .circleC:hover{
+    border-color: 0;
+    background: url(../img/line-point.png) no-repeat 0px -43px;
+    background-size: 13px;
+}
+.content .circle_choose{
+    border-color: 0;
+    background: url(../img/line-point.png) no-repeat 0px -43px;
+    background-size: 13px;
+}
+.content .boxC .detailContain{
+    flex: 1 1 auto;
+}
+.detailContain .detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.detail .tip{
+    width: 7px;
+    height: 7px;
+    background-color: #74ABFD;
+    flex: 0 0 7px;
+    margin: 4px;
+}
+.detail .text{
+    white-space: pre-line;
+}
+.content .boxC .pagebtn{
+    flex: 0 1 auto;
+}
+ .boxC .pagebtn a{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #D6D6D6;
+    color: #D6D6D6;
+    text-align: center;
+	line-height: 10px;
+	margin: 3px;
+}
+.boxC_bg .pagebtn a{
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+}
+.boxC .pagebtn a:not(.prevStop):hover{
+    cursor: pointer;
+    border: 1px solid #3474D6;
+    color: #3474D6;
+}
+.boxC_bg .pagebtn a:not(.prevStop):hover{
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: #3474D6;
+    background-color: #fff;
+}
+.timeAxis .item .content{
+    width: 125px;
+	padding: 10px 20px;
+	height: 100%;
+}
+/**lef rig*/
+.timeAxis .scrollbtn{
+	position: absolute;
+    top: 115px;
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D6D6D6;
+    border-radius: 50%;
+    font-weight: bolder;
+    text-align: center;
+    color: #D6D6D6;
+}
+.timeAxis .scrollbtn:not(.stop):hover{
+    cursor: pointer;
+    border: 1px solid #3474D6;
+    color: #3474D6;
+    background-position-y: -28px;
+}
+.timeAxis .lef {
+	left: 0;
+}
+.timeAxis .rig {
+	right: 0;
+}
+/**line**/
+.timeAxis .line {
+	position: absolute;
+	top: 125px;
+    height: 1px;
+    width: 90%;
+    margin: 0 5%;
+    width: 84%;
+    margin: 0 8%;
+    border-bottom: 1px solid #D6D6D6;
+	z-index: -1;
+}
+.timeAxis .item .line-point {
+	position: absolute;
+	left: 4px;
+	bottom: -4px;
+	display: block;
+	height: 18px;
+	width: 18px;
+	background: url(../img/line-point.png) no-repeat 0px 0px;
+}
+.timeAxis .item.bottom .line-point {
+	top: -6px
+}
+.echartShow{
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.echartContainer{
+    width: 500px;
+    height: 500px;
+    flex: 0 0 500px;
+}
